@@ -2,6 +2,7 @@ import { IStoreManagerOptions } from './store/store-manager-options.interface';
 import { IToken } from './token/token.interface';
 
 export interface IOptions {
+  files: string[] | undefined;
   executionId?: string;
   minLines?: number;
   maxLines?: number;

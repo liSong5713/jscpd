@@ -77,7 +77,7 @@ if (cpd.options.blame) {
   cpd.attachPostHook(new BlamerPostHook());
 }
 
-const clones: Promise<IClone[]> = cpd.detectInFiles(options.path);
+const clones: Promise<IClone[]> = cpd.detectInFiles(options.files);
 
 clones.then(() => {
   StoresManager.close();
