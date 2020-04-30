@@ -131,6 +131,9 @@
       "**/*.spec.js"
     ]
   },
+  "publishConfig": {
+		"registry": "http://nexus.17usoft.com/repository/npm-fe/"
+	},
   "repository": {
     "type": "git",
     "url": "https://github.com/kucherenko/jscpd.git"
