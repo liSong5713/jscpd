@@ -33,7 +33,7 @@ export function prepareOptions(cli: Command): IOptions {
     absolute: cli.absolute,
     noSymlinks: cli.noSymlinks,
     ignoreCase: cli.ignoreCase,
-    gitignore: cli.gitignore
+    gitignore: cli.gitignore,
   };
 
   if (cli.threshold !== undefined) {
@@ -54,7 +54,7 @@ export function prepareOptions(cli: Command): IOptions {
 
   argsConfig.path = cli.path ? [cli.path].concat(cli.args) : cli.args;
 
-  Object.keys(argsConfig).forEach(key => {
+  Object.keys(argsConfig).forEach((key) => {
     if (typeof argsConfig[key] === 'undefined') {
       delete argsConfig[key];
     }
@@ -75,7 +75,7 @@ export function prepareOptions(cli: Command): IOptions {
     ...getDefaultOptions(),
     ...packageJsonConfig,
     ...storedConfig,
-    ...argsConfig
+    ...argsConfig,
   };
 
   if (result.hasOwnProperty('config') && result.config && isAbsolute(result.config) && result.path) {
@@ -86,7 +86,7 @@ export function prepareOptions(cli: Command): IOptions {
   result.listeners = result.listeners || [];
 
   if (result.silent) {
-    result.reporters = result.reporters.filter(reporter => reporter.indexOf('console') === -1).concat('silent');
+    result.reporters = result.reporters.filter((reporter) => reporter.indexOf('console') === -1).concat('silent');
   }
 
   if (result.threshold !== undefined) {
@@ -122,7 +122,7 @@ export function getDefaultOptions(): IOptions {
     noSymlinks: false,
     ignoreCase: false,
     gitignore: false,
-    reportersOptions: {}
+    reportersOptions: {},
   };
 }
 

@@ -96,7 +96,7 @@ export const FORMATS: {
     exts: [],
   },
   css: {
-    exts: ['css', 'gss','wxss'],
+    exts: ['css', 'gss', 'wxss'],
   },
   d: {
     exts: ['d'],
@@ -205,10 +205,6 @@ export const FORMATS: {
   },
   javascript: {
     exts: ['js', 'es', 'es6'],
-  },
-  miniprogram: {
-    //小程序
-    exts: ['wxml', 'wxss', 'wxs'],
   },
   jolie: {
     exts: [],
