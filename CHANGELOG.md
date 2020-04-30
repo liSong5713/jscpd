@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.2.1](https://github.com/kucherenko/jscpd/compare/v3.1.0...v3.2.1) (2020-04-30)
+
+
+### Bug Fixes
+
+* **package:** update cli-table3 to version 0.6.0 ([0b29242](https://github.com/kucherenko/jscpd/commit/0b292422cb4f9b11382470aeb8f6e55bfa97e261))
+* **package:** update fs-extra to version 9.0.0 ([cbae200](https://github.com/kucherenko/jscpd/commit/cbae200dacd4f5d71be81cb1dad48d1cd570ad94))
+
 ## [3.1.0](https://github.com/kucherenko/jscpd/compare/v3.0.1...v3.1.0) (2020-03-11)
 
 
