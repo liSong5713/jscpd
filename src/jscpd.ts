@@ -180,8 +180,8 @@ export class JSCPD {
       this._clones.push(...(await this._detect(source.source, source.sourceOptions)));
     }
 
-    await this._detectionFinished(this._clones);
-    return { clones: this._clones, jsons: sources };
+    const statistic = await this._detectionFinished(this._clones);
+    return { clones: this._clones, statistic };
   }
 
   public on(event: string, fn: EventEmitter.ListenerFn, context?: any) {
@@ -246,11 +246,12 @@ export class JSCPD {
         return clones;
       })
     );
-    await this.generateReports(clones);
+    const statistic: IStatistic = await this.generateReports(clones);
     this.eventEmitter.emit(END_EVENT, clones);
     if (!pesists) {
       this.eventEmitter.on(END_EVENT, () => StoresManager.close());
     }
+    return statistic;
   }
 
   private async generateReports(clones: IClone[]) {
@@ -260,5 +261,6 @@ export class JSCPD {
     Object.values(getRegisteredReporters()).map((reporter: IReporter) => {
       reporter.report(clones, statistic);
     });
+    return statistic;
   }
 }

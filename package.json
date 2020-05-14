@@ -30,10 +30,7 @@
     "version": "standard-version",
     "reset": "git clean -dfx && git reset --hard && npm i",
     "clean": "trash build test",
-    "all": "run-s reset test cov:check doc:html",
-    "prepare-release": "run-s all version doc:publish",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "all": "run-s reset test cov:check doc:html"
   },
   "scripts-info": {
     "info": "Display information about the package scripts",
