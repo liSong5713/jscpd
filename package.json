@@ -1,6 +1,6 @@
 {
   "name": "@te-one/jscpd",
-  "version": "3.2.1",
+  "version": "3.2.3",
   "description": "Copy/paste detector for programming code, support JavaScript, CoffeeScript, PHP, Ruby, Python, Less, Go, Java, Yaml, C#, C++, C, Puppet, Twig languages  base on jspcd",
   "main": "build/index.js",
   "bin": {
