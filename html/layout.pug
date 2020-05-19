@@ -4,7 +4,7 @@ html(lang='en')
     meta(charset='utf-8')
     meta(http-equiv='x-ua-compatible', content='ie=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    title jscpd, Copy/Paste Detector
+    title Duplicated Detector
     link(rel='stylesheet', href='https://unpkg.com/purecss@1.0.0/build/pure-min.css', integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w", crossorigin="anonymous")
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism.min.css')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js')
@@ -325,7 +325,6 @@ html(lang='en')
     #layout.pure-g
       .sidebar.pure-u-1.pure-u-md-1-4
         .header
-          img(src="https://raw.githubusercontent.com/kucherenko/jscpd/1.0.0-alpha/assets/logo-small-box.svg?sanitize=true" width=190)
           nav.nav
             ul.nav-list
               if formats
@@ -337,8 +336,6 @@ html(lang='en')
       .content.pure-u-1.pure-u-md-3-4
         block content
         .footer
-          p © 2013-2018 jscpd, copy/paste detector
-
     script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-730549-17')
     script.
       window.dataLayer = window.dataLayer || [];
