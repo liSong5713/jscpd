@@ -55,7 +55,8 @@ export class JsonReporter implements IReporter {
     });
 
     ensureDirSync(getOption('output', this.options));
-    writeFileSync(getOption('output', this.options) + '/jscpd-report.json', JSON.stringify(this.json, null, '\t'));
+    const { reportersOptions: { name = 'jscpd-report.json' } = {} } = this.options;
+    writeFileSync(getOption('output', this.options) + `/${name}`, JSON.stringify(this.json, null, '\t'));
   }
 
   private cloneFound(clone: IClone) {

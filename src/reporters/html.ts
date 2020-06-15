@@ -16,7 +16,7 @@ export class HtmlReporter implements IReporter {
 
     const formatsReports: any[] =
       statistic && statistic.formats
-        ? Object.keys(statistic.formats).map(format => {
+        ? Object.keys(statistic.formats).map((format) => {
             return { value: statistic.formats[format].total.lines, name: format };
           })
         : [];
@@ -29,12 +29,13 @@ export class HtmlReporter implements IReporter {
       getPath,
       getSourceLocation,
       generateLine,
-      options: this.options
+      options: this.options,
     });
     if (this.options.output) {
+      const { reportersOptions: { name = 'jscpd-report.html' } = {} } = this.options;
       ensureDirSync(this.options.output);
-      writeFileSync(join(this.options.output, 'jscpd-report.html'), html);
-      console.log(green(`HTML report saved to ${join(this.options.output, 'jscpd-report.html')}`));
+      writeFileSync(join(this.options.output, name), html);
+      console.log(green(`HTML report saved to ${join(this.options.output, name)}`));
     }
   }
 }

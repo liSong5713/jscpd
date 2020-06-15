@@ -32,8 +32,8 @@ export class XmlReporter implements IReporter {
       `;
     });
     xmlDoc += '</pmd-cpd>';
-
+    const { reportersOptions: { name = 'jscpd-report.xml' } = {} } = this.options;
     ensureDirSync(getOption('output', this.options));
-    writeFileSync(getOption('output', this.options) + '/jscpd-report.xml', xmlDoc);
+    writeFileSync(getOption('output', this.options) + `${name}.xml`, xmlDoc);
   }
 }
